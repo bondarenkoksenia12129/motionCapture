@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KAF</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbarContainer">
+      <div class="appBarContainer">
+        <a
+          id="navMenu"
+          href="javascript:void(0)"
+          onclick="toggleDrawer()"
+          title="Toggle Navigation Menu"
+          ><i class="fa fa-bars" style="padding: 5px; color: black"></i
+        ></a>
+        <a href="#" class="homeNavItem">
+          <img src="/assets/logo.svg" alt="logo" />
+        </a>
+        <a href="#auctions" class="navItem" style="margin-left: 103px">
+          <div class="navListItem">
+            <img
+              src="/assets/auctions.svg"
+              alt="logo"
+              width="30px"
+              height="30px"
+            />
+            Auctions
+          </div>
+        </a>
+        <a href="#contests" class="navItem">
+          <div class="navListItem">
+            <img
+              src="/assets/contests.svg"
+              alt="logo"
+              width="30px"
+              height="30px"
+            />
+            Contests
+          </div>
+        </a>
+        <a href="#project" class="navItem">
+          <div class="navListItem">
+            <img
+              src="/assets/project.svg"
+              alt="logo"
+              width="30px"
+              height="30px"
+            />
+            Project
+          </div>
+        </a>
+        <a href="#portfolios" class="navItem">
+          <div class="navListItem">
+            <img
+              src="/assets/portfolios.svg"
+              alt="logo"
+              width="30px"
+              height="30px"
+            />
+            Portfolios
+          </div>
+        </a>
+        <a href="#freelancers" class="navItem">
+          <div class="navListItem">
+            <img
+              src="/assets/freelancers.svg"
+              alt="logo"
+              width="30px"
+              height="30px"
+            />
+            Freelancers
+          </div>
+        </a>
+        <a href="#forum" class="navItem" style="margin-right: 103px">
+          <div class="navListItem">
+            <img
+              src="/assets/forum.svg"
+              alt="logo"
+              width="30px"
+              height="30px"
+            />
+            Forum
+          </div>
+        </a>
+
+        <div class="horizontalContainer">
+          <img src="assets/messages.svg" alt="messages" />
+          <img src="assets/notifications.svg" alt="notifications" />
+          <div class="navItem dropdown">
+            <img
+              src="/assets/person.svg"
+              alt="person"
+              width="43px"
+              height="43px"
+            />
+            <div class="dropdownContent">
+              <div class="horizontalContainer">
+                <img
+                  src="/assets/person.svg"
+                  alt="person"
+                  width="43px"
+                  height="43px"
+                />
+                <div>
+                  <h4 style="color: black; margin: 0">Ahmed Ali</h4>
+                  <p style="color: #696f79; margin: 0">Student</p>
+                </div>
+              </div>
+
+              <div class="horizontalContainer">
+                <i class="fa fa-user-circle-o"></i>
+                <p style="color: #696f79">My Profile</p>
+              </div>
+              <div
+                class="horizontalContainer"
+                style="justify-content: space-between"
+              >
+                <div class="horizontalContainer">
+                  <i class="fa fa-moon-o"></i>
+                  <p style="color: #696f79">Dark Mode</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div
+                class="horizontalContainer"
+                style="justify-content: space-between"
+              >
+                <div class="horizontalContainer">
+                  <i class="fa fa-language"></i>
+                  <p style="color: #696f79">Language</p>
+                </div>
+                <img src="/assets/language.svg" alt="language" />
+              </div>
+              <div class="horizontalContainer">
+                <i class="fa fa-cog"></i>
+                <p style="color: #696f79">Account Settings</p>
+              </div>
+              <div class="horizontalContainer">
+                <i class="fa fa-sign-out" style="color: #f56342"></i>
+                <p style="color: #f56342">Logout</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navbar on small screens -->
+    <div id="navResponsive" class="responsiveMenu">
+      <div class="horizontalContainer" onclick="toggleDrawer()">
+        <img src="/assets/auctions.svg" alt="logo" width="30px" height="30px" />
+        Auctions
+      </div>
+      <div class="horizontalContainer" onclick="toggleDrawer()">
+        <img src="/assets/contests.svg" alt="logo" width="30px" height="30px" />
+        Contests
+      </div>
+      <div class="horizontalContainer" onclick="toggleDrawer()">
+        <img src="/assets/project.svg" alt="logo" width="30px" height="30px" />
+        Project
+      </div>
+      <div class="horizontalContainer" onclick="toggleDrawer()">
+        <img
+          src="/assets/portfolios.svg"
+          alt="logo"
+          width="30px"
+          height="30px"
+        />
+        Portfolios
+      </div>
+      <div class="horizontalContainer" onclick="toggleDrawer()">
+        <img
+          src="/assets/freelancers.svg"
+          alt="logo"
+          width="30px"
+          height="30px"
+        />
+        Freelancers
+      </div>
+      <div class="horizontalContainer" onclick="toggleDrawer()">
+        <img src="/assets/forum.svg" alt="logo" width="30px" height="30px" />
+        Forum
+      </div>
+      <br />
+      <div class="dropdownContent responsiveDropdownContent">
+        <div class="horizontalContainer">
+          <img
+            src="/assets/person.svg"
+            alt="person"
+            width="43px"
+            height="43px"
+          />
+          <div>
+            <h4 style="color: black; margin: 0">Ahmed Ali</h4>
+            <p style="color: #696f79; margin: 0">Student</p>
+          </div>
+        </div>
+
+        <div class="horizontalContainer">
+          <i class="fa fa-user-circle-o"></i>
+          <p style="color: #696f79">My Profile</p>
+        </div>
+        <div class="horizontalContainer" style="justify-content: space-between">
+          <div class="horizontalContainer">
+            <i class="fa fa-moon-o"></i>
+            <p style="color: #696f79">Dark Mode</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="horizontalContainer" style="justify-content: space-between">
+          <div class="horizontalContainer">
+            <i class="fa fa-language"></i>
+            <p style="color: #696f79">Language</p>
+          </div>
+          <img src="/assets/language.svg" alt="language" />
+        </div>
+        <div class="horizontalContainer">
+          <i class="fa fa-cog"></i>
+          <p style="color: #696f79">Account Settings</p>
+        </div>
+        <div class="horizontalContainer">
+          <i class="fa fa-sign-out" style="color: #f56342"></i>
+          <p style="color: #f56342">Logout</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page content -->
+    <main style="width: 100%">
+      <div class="mainContainer" style="gap: 75px">
+        <div>
+          <!-- Hero Section -->
+          <section class="heroContainer">
+            <p class="navItem">Design / Logo Design</p>
+            <h2>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
+              nisi, cras neque Lorem ipsum dolor sit amet,
+            </h2>
+            <div class="flexContainer" style="justify-content: space-between">
+              <div class="actionsContainer" style="color: lightgray">
+                <span class="fa fa-star checked" style="font-size: 22px"></span>
+                <span class="fa fa-star checked" style="font-size: 22px"></span>
+                <span class="fa fa-star checked" style="font-size: 22px"></span>
+                <span class="fa fa-star checked" style="font-size: 22px"></span>
+                <span class="fa fa-star" style="font-size: 22px"></span>
+                <p style="color: #696f79">4.1 (500)</p>
+              </div>
+              <div class="actionsContainer">
+                <img src="/assets/share.svg" alt="share" />
+                <img src="/assets/like.svg" alt="like" />
+              </div>
+            </div>
+
+            <div class="slideshowContainer">
+              <div class="slideContainer fade">
+                <img src="assets/agency.svg" alt="agency" width="100%" />
+              </div>
+
+              <div class="slideContainer fade">
+                <img src="assets/agency.svg" alt="agency" width="100%" />
+              </div>
+
+              <div class="slideContainer fade">
+                <img src="assets/agency.svg" alt="agency" width="100%" />
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+
+              <div class="dotsContainer">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Description Section -->
+          <section>
+            <h2>Description</h2>
+            <div class="card responsiveWidth" style="width: 100%">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
+              nisi, cras neque Lorem ipsum dolor sit amet, Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem
+              ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit amet,
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum
+              dolor sit amet.
+            </div>
+          </section>
+
+          <!-- Service Add-Ons Section -->
+          <section>
+            <div
+              class="flexContainer"
+              style="justify-content: space-between; align-items: baseline"
+            >
+              <h2 style="margin-top: 50px">Service Add-Ons</h2>
+              <div
+                class="flexContainer"
+                style="gap: 8px; align-items: baseline"
+              >
+                <i class="fa fa-check-circle" style="color: lightgray"></i>
+                <p
+                  style="color: lightgray; margin: 0; cursor: pointer"
+                  onclick="selectAll()"
+                >
+                  select all
+                </p>
+              </div>
+            </div>
+            <div class="verticalContainer">
+              <div class="card verticalContainer responsiveWidth">
+                <div class="horizontalContainer" style="gap: 0">
+                  <i
+                    class="fa fa-check-circle"
+                    style="color: #1dbf73; font-size: 30px; margin-right: 16px"
+                  ></i>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Diam nisi, cras neque Lorem ipsum dolor sit amet, Lorem
+                    ipsum dolor sit amet.
+                  </p>
+                </div>
+                <div class="flexContainer" style="justify-content: flex-start">
+                  <div class="pill">$100</div>
+                  <div class="pill">2 Days</div>
+                </div>
+              </div>
+              <div class="card verticalContainer responsiveWidth">
+                <div class="horizontalContainer" style="gap: 0">
+                  <i
+                    class="fa fa-circle-thin"
+                    style="font-size: 30px; margin-right: 16px"
+                  ></i>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Diam nisi, cras neque Lorem ipsum dolor sit amet, Lorem
+                    ipsum dolor sit amet.
+                  </p>
+                </div>
+                <div class="flexContainer" style="justify-content: flex-start">
+                  <div class="pill">$100</div>
+                  <div class="pill">2 Days</div>
+                </div>
+              </div>
+              <div class="card verticalContainer responsiveWidth">
+                <div class="horizontalContainer" style="gap: 0">
+                  <i
+                    class="fa fa-circle-thin"
+                    style="font-size: 30px; margin-right: 16px"
+                  ></i>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Diam nisi, cras neque Lorem ipsum dolor sit amet, Lorem
+                    ipsum dolor sit amet.
+                  </p>
+                </div>
+                <div class="flexContainer" style="justify-content: flex-start">
+                  <div class="pill">$100</div>
+                  <div class="pill">2 Days</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Purchase Service Section -->
+          <section>
+            <h2 style="margin-top: 50px">Purchase Service</h2>
+            <div
+              class="card horizontalContainer responsiveWidth verticalResponsiveContainer"
+              style="width: 100%"
+            >
+              <div class="counter">
+                <button id="decrement-btn">-</button>
+                <div id="counter-value">3</div>
+                <button id="increment-btn">+</button>
+              </div>
+              <h4 id="totalValue" class="flexContainer counterValue">$300</h4>
+              <button class="purchaseButton">Purchase</button>
+            </div>
+          </section>
+
+          <!-- Service Rating Section -->
+          <section>
+            <h2 style="margin-top: 80px">
+              <span class="fa fa-star checked"></span>
+              4.6 Service Rating . 46 Ratings
+            </h2>
+            <div
+              class="card verticalContainer ratingsContainer responsiveWidth"
+            >
+              <div
+                class="horizontalContainer equalContainer verticalResponsiveContainer"
+                style="justify-content: space-between"
+              >
+                <div class="horizontalContainer equalContainer">
+                  Work Quality
+                  <div class="horizontalContainer" style="gap: 4px">
+                    <span class="fa fa-star checked"></span>
+                    5.0
+                  </div>
+                </div>
+                <div class="horizontalContainer starsContainer">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <div class="horizontalContainer">
+                  <progress value="75" max="100">75%</progress>
+                  <p>4</p>
+                </div>
+              </div>
+              <div
+                class="horizontalContainer equalContainer verticalResponsiveContainer"
+                style="justify-content: space-between"
+              >
+                <div class="horizontalContainer equalContainer">
+                  Communication & Collaboration
+                  <div class="horizontalContainer" style="gap: 4px">
+                    <span class="fa fa-star checked"></span>
+                    5.0
+                  </div>
+                </div>
+                <div class="horizontalContainer starsContainer">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <div class="horizontalContainer">
+                  <progress value="75" max="100">75%</progress>
+                  <p>4</p>
+                </div>
+              </div>
+              <div
+                class="horizontalContainer equalContainer verticalResponsiveContainer"
+                style="justify-content: space-between"
+              >
+                <div class="horizontalContainer equalContainer">
+                  Adherence to Schedule
+                  <div class="horizontalContainer" style="gap: 4px">
+                    <span class="fa fa-star checked"></span>
+                    5.0
+                  </div>
+                </div>
+                <div class="horizontalContainer starsContainer">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <div class="horizontalContainer">
+                  <progress value="75" max="100">75%</progress>
+                  <p>4</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card verticalContainer reviewsContainer responsiveWidth"
+            >
+              <div class="horizontalContainer" style="align-items: flex-start">
+                <img src="/assets/person2.svg" alt="person2" />
+                <div class="verticalContainer" style="gap: 8px">
+                  <h4 style="margin: 0">Jane Smith</h4>
+                  <div
+                    class="horizontalContainer"
+                    style="gap: 4px; color: lightgray"
+                  >
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p style="color: #696f79; margin-left: 8px">. 30m</p>
+                  </div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
+                  nisi, cras neque Lorem ipsum dolor sit amet,Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit.... Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit. Diam nisi, cras neque
+                  Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit....
+                </div>
+              </div>
+              <div class="horizontalContainer" style="align-items: flex-start">
+                <img src="/assets/person2.svg" alt="person2" />
+                <div class="verticalContainer" style="gap: 8px">
+                  <h4 style="margin: 0">Jane Smith</h4>
+                  <div
+                    class="horizontalContainer"
+                    style="gap: 4px; color: lightgray"
+                  >
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p style="color: #696f79; margin-left: 8px">. 30m</p>
+                  </div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
+                  nisi, cras neque Lorem ipsum dolor sit amet,Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit.... Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit. Diam nisi, cras neque
+                  Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit....
+                </div>
+              </div>
+              <div class="horizontalContainer" style="align-items: flex-start">
+                <img src="/assets/person2.svg" alt="person2" />
+                <div class="verticalContainer" style="gap: 8px">
+                  <h4 style="margin: 0">Jane Smith</h4>
+                  <div
+                    class="horizontalContainer"
+                    style="gap: 4px; color: lightgray"
+                  >
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p style="color: #696f79; margin-left: 8px">. 30m</p>
+                  </div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
+                  nisi, cras neque Lorem ipsum dolor sit amet,Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit.... Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit. Diam nisi, cras neque
+                  Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit....
+                </div>
+              </div>
+              <div
+                class="horizontalContainer"
+                style="align-items: flex-start; width: 100%"
+              >
+                <img src="/assets/person.svg" alt="person" />
+                <div class="verticalContainer" style="gap: 24px">
+                  <textarea
+                    class="textareaContainer responsiveWidth"
+                    placeholder="Write your review in here"
+                  ></textarea>
+                  <button class="submitButton">Post Review</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="verticalContainer" style="width: unset; gap: 40px">
+          <div class="card verticalContainer sidebarCard">
+            <h3 style="margin: 0; position: absolute; left: 20px; top: 20px">
+              Seller
+            </h3>
+
+            <img
+              src="/assets/person3.svg"
+              alt="person"
+              width="45px"
+              height="45px"
+            />
+            <div class="horizontalContainer">
+              <h3 style="margin: 0">Jane Smith</h3>
+              <img src="/assets/checked.svg" alt="checked" />
+            </div>
+            <div class="horizontalContainer" style="color: #696f79">
+              <i class="fa fa-map-marker" style="color: #696f79"></i>
+              Cairo, Egypt
+            </div>
+            <div
+              class="actionsContainer"
+              style="color: lightgray; height: 28px"
+            >
+              <span class="fa fa-star checked" style="font-size: 18px"></span>
+              <span class="fa fa-star checked" style="font-size: 18px"></span>
+              <span class="fa fa-star checked" style="font-size: 18px"></span>
+              <span class="fa fa-star checked" style="font-size: 18px"></span>
+              <span class="fa fa-star" style="font-size: 18px"></span>
+              <p style="color: #696f79">4.1 (500)</p>
+            </div>
+            <div class="horizontalContainer">
+              <div class="pinContainer flexContainer">
+                <img src="/assets/ribbon.svg" alt="ribbon" />
+              </div>
+              <div class="pinContainer flexContainer">
+                <img src="/assets/exit.svg" alt="exit" />
+              </div>
+              <div class="pinContainer flexContainer">
+                <img src="/assets/card.svg" alt="card" />
+              </div>
+            </div>
+            <p style="padding-inline: 16px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
+              Lorem ipsum dolor sit amet..
+            </p>
+            <button class="contactButton">Contact Me</button>
+          </div>
+          <div
+            class="card verticalContainer"
+            style="padding-inline: 18px; width: unset"
+          >
+            <h3 style="margin: 0">Info</h3>
+
+            <div
+              class="horizontalContainer"
+              style="justify-content: space-between; gap: 8px; width: 100%"
+            >
+              <div class="horizontalContainer" style="gap: 16px">
+                <i class="fa fa-usd" style="width: 18px; height: 18px"></i>
+                <p style="font-size: 14px">Price</p>
+              </div>
+              <p style="font-size: 14px; width: 100px; text-align: center">
+                $10
+              </p>
+            </div>
+            <div
+              class="horizontalContainer"
+              style="justify-content: space-between; gap: 8px; width: 100%"
+            >
+              <div class="horizontalContainer" style="gap: 16px">
+                <i class="fa fa-clock-o" style="width: 18px; height: 18px"></i>
+                <p style="font-size: 14px">Delivery Duration</p>
+              </div>
+              <p style="font-size: 14px; width: 100px; text-align: center">
+                1 day
+              </p>
+            </div>
+            <div
+              class="horizontalContainer"
+              style="justify-content: space-between; gap: 8px; width: 100%"
+            >
+              <div class="horizontalContainer" style="gap: 16px">
+                <i
+                  class="fa fa-shopping-basket"
+                  style="width: 18px; height: 18px"
+                ></i>
+                <p style="font-size: 14px">In Progress Orders</p>
+              </div>
+              <p style="font-size: 14px; width: 100px; text-align: center">2</p>
+            </div>
+            <div
+              class="horizontalContainer"
+              style="justify-content: space-between; gap: 8px; width: 100%"
+            >
+              <div class="horizontalContainer" style="gap: 16px">
+                <i class="fa fa-users" style="width: 18px; height: 18px"></i>
+                <p style="font-size: 14px">Customers</p>
+              </div>
+              <p style="font-size: 14px; width: 100px; text-align: center">2</p>
+            </div>
+            <div
+              class="horizontalContainer"
+              style="justify-content: space-between; gap: 8px; width: 100%"
+            >
+              <div class="horizontalContainer" style="gap: 16px">
+                <i class="fa fa-percent" style="width: 18px; height: 18px"></i>
+                <p style="font-size: 14px">Sales</p>
+              </div>
+              <p style="font-size: 14px; width: 100px; text-align: center">
+                $25
+              </p>
+            </div>
+            <div
+              class="horizontalContainer"
+              style="justify-content: space-between; gap: 8px; width: 100%"
+            >
+              <div class="horizontalContainer" style="gap: 16px">
+                <i class="fa fa-list" style="width: 18px; height: 18px"></i>
+                <p style="font-size: 14px">Category</p>
+              </div>
+              <p style="font-size: 14px; width: 100px; text-align: center">
+                Design
+              </p>
+            </div>
+            <div
+              class="horizontalContainer"
+              style="justify-content: space-between; gap: 8px; width: 100%"
+            >
+              <div class="horizontalContainer" style="gap: 16px">
+                <i class="fa fa-list" style="width: 18px; height: 18px"></i>
+                <p style="font-size: 14px">Subcategory</p>
+              </div>
+              <p style="font-size: 14px; width: 100px; text-align: center">
+                Logo Design
+              </p>
+            </div>
+          </div>
+          <div class="card verticalContainer" style="width: unset">
+            <h3 style="margin: 0">Share & Earn</h3>
+            <div
+              class="horizontalContainer"
+              style="justify-content: space-between; width: 100%"
+            >
+              <img src="/assets/linkedin.svg" alt="linkedin" />
+              <img src="/assets/facebook.svg" alt="facebook.svg" />
+              <img src="/assets/whatsapp.svg" alt="whatsapp.svg" />
+              <img src="/assets/twitter.svg" alt="twitter.svg" />
+              <div class="pinContainer flexContainer">
+                <i class="fa fa-clone"></i>
+              </div>
+            </div>
+          </div>
+          <div class="verticalContainer card recommendedSection">
+            <div
+              class="flexContainer"
+              style="width: 100%; justify-content: space-between"
+            >
+              <h3 style="margin: 0">Seller Other Services</h3>
+              <p
+                style="color: #696f79; margin: 0; cursor: pointer"
+                onclick="showSmallCards()"
+              >
+                see more
+              </p>
+            </div>
+            <div class="horizontalContainer" style="gap: 0; border-radius: 8px">
+              <img src="/assets/agency3.svg" alt="agency3" />
+              <div class="verticalContainer smallCardContainer">
+                <p style="margin: 0; font-size: 12px">
+                  Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...
+                </p>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 100%"
+                >
+                  <div class="horizontalContainer" style="gap: 8px">
+                    <span class="fa fa-star checked"></span>
+                    <p style="color: #696f79">4.9 (50)</p>
+                    <div
+                      class="horizontalContainer"
+                      style="gap: 0; justify-content: flex-end"
+                    >
+                      <i class="fa fa-tag" style="color: #1dbf73"></i>
+                      $10
+                    </div>
+                  </div>
+                  <i class="fa fa-heart-o"></i>
+                </div>
+              </div>
+            </div>
+            <div class="horizontalContainer" style="gap: 0; border-radius: 8px">
+              <img src="/assets/agency3.svg" alt="agency3" />
+              <div class="verticalContainer smallCardContainer">
+                <p style="margin: 0; font-size: 12px">
+                  Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...
+                </p>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 100%"
+                >
+                  <div class="horizontalContainer" style="gap: 8px">
+                    <span class="fa fa-star checked"></span>
+                    <p style="color: #696f79">4.9 (50)</p>
+                    <div
+                      class="horizontalContainer"
+                      style="gap: 0; justify-content: flex-end"
+                    >
+                      <i class="fa fa-tag" style="color: #1dbf73"></i>
+                      $10
+                    </div>
+                  </div>
+                  <i class="fa fa-heart" style="color: red"></i>
+                </div>
+              </div>
+            </div>
+            <div class="horizontalContainer" style="gap: 0; border-radius: 8px">
+              <img src="/assets/agency3.svg" alt="agency3" />
+              <div class="verticalContainer smallCardContainer">
+                <p style="margin: 0; font-size: 12px">
+                  Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...
+                </p>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 100%"
+                >
+                  <div class="horizontalContainer" style="gap: 8px">
+                    <span class="fa fa-star checked"></span>
+                    <p style="color: #696f79">4.9 (50)</p>
+                    <div
+                      class="horizontalContainer"
+                      style="gap: 0; justify-content: flex-end"
+                    >
+                      <i class="fa fa-tag" style="color: #1dbf73"></i>
+                      $10
+                    </div>
+                  </div>
+                  <i class="fa fa-heart-o"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="horizontalContainer hide"
+              style="gap: 0; border-radius: 8px"
+            >
+              <img src="/assets/agency3.svg" alt="agency3" />
+              <div class="verticalContainer smallCardContainer">
+                <p style="margin: 0; font-size: 12px">
+                  Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...
+                </p>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 100%"
+                >
+                  <div class="horizontalContainer" style="gap: 8px">
+                    <span class="fa fa-star checked"></span>
+                    <p style="color: #696f79">4.9 (50)</p>
+                    <div
+                      class="horizontalContainer"
+                      style="gap: 0; justify-content: flex-end"
+                    >
+                      <i class="fa fa-tag" style="color: #1dbf73"></i>
+                      $10
+                    </div>
+                  </div>
+                  <i class="fa fa-heart-o"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="horizontalContainer hide"
+              style="gap: 0; border-radius: 8px"
+            >
+              <img src="/assets/agency3.svg" alt="agency3" />
+              <div class="verticalContainer smallCardContainer">
+                <p style="margin: 0; font-size: 12px">
+                  Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...
+                </p>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 100%"
+                >
+                  <div class="horizontalContainer" style="gap: 8px">
+                    <span class="fa fa-star checked"></span>
+                    <p style="color: #696f79">4.9 (50)</p>
+                    <div
+                      class="horizontalContainer"
+                      style="gap: 0; justify-content: flex-end"
+                    >
+                      <i class="fa fa-tag" style="color: #1dbf73"></i>
+                      $10
+                    </div>
+                  </div>
+                  <i class="fa fa-heart-o"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="horizontalContainer hide"
+              style="gap: 0; border-radius: 8px"
+            >
+              <img src="/assets/agency3.svg" alt="agency3" />
+              <div class="verticalContainer smallCardContainer">
+                <p style="margin: 0; font-size: 12px">
+                  Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...
+                </p>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 100%"
+                >
+                  <div class="horizontalContainer" style="gap: 8px">
+                    <span class="fa fa-star checked"></span>
+                    <p style="color: #696f79">4.9 (50)</p>
+                    <div
+                      class="horizontalContainer"
+                      style="gap: 0; justify-content: flex-end"
+                    >
+                      <i class="fa fa-tag" style="color: #1dbf73"></i>
+                      $10
+                    </div>
+                  </div>
+                  <i class="fa fa-heart-o"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Page Content -->
+
+      <div style="justify-content: space-between" class="mainContainer">
+        <section style="width: 100%; margin-bottom: 30px">
+          <div class="flexContainer" style="justify-content: space-between">
+            <h2>Suggested Services</h2>
+            <p style="color: #696f79; cursor: pointer" onclick="showBigCards()">
+              see more
+            </p>
+          </div>
+          <div
+            class="horizontalContainer verticalResponsiveContainer"
+            style="gap: 32px; flex-wrap: wrap"
+          >
+            <div class="itemCard verticalContainer" style="gap: 0">
+              <div class="likeButton flexContainer">
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <img
+                src="/assets/agency2.svg"
+                alt="agency"
+                width="292px"
+                height="254px"
+                style="object-fit: cover"
+              />
+              <div class="card verticalContainer descriptionSection">
+                <h3 style="margin: 0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </h3>
+                <div class="horizontalContainer" style="gap: 8px">
+                  <span class="fa fa-star checked"></span>
+                  4.9
+                  <i class="fa fa-shopping-cart" style="color: #696f79"></i>
+                  300
+                </div>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 264px"
+                >
+                  <div class="horizontalContainer">
+                    <img src="/assets/person2.svg" alt="person2" />
+                    <h5 style="margin: 0">Jane Smith</h5>
+                  </div>
+                  <div
+                    class="horizontalContainer"
+                    style="gap: 0; justify-content: flex-end"
+                  >
+                    <i class="fa fa-tag" style="color: #1dbf73"></i>
+                    $10
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="itemCard verticalContainer" style="gap: 0">
+              <div class="likeButton flexContainer">
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <img
+                src="/assets/agency2.svg"
+                alt="agency"
+                width="292px"
+                height="254px"
+                style="object-fit: cover"
+              />
+              <div class="card verticalContainer descriptionSection">
+                <h3 style="margin: 0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </h3>
+                <div class="horizontalContainer" style="gap: 8px">
+                  <span class="fa fa-star checked"></span>
+                  4.9
+                  <i class="fa fa-shopping-cart" style="color: #696f79"></i>
+                  300
+                </div>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 264px"
+                >
+                  <div class="horizontalContainer">
+                    <img src="/assets/person2.svg" alt="person2" />
+                    <h5 style="margin: 0">Jane Smith</h5>
+                  </div>
+                  <div
+                    class="horizontalContainer"
+                    style="gap: 0; justify-content: flex-end"
+                  >
+                    <i class="fa fa-tag" style="color: #1dbf73"></i>
+                    $10
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="itemCard verticalContainer" style="gap: 0">
+              <div class="likeButton flexContainer">
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <img
+                src="/assets/agency2.svg"
+                alt="agency"
+                width="292px"
+                height="254px"
+                style="object-fit: cover"
+              />
+              <div class="card verticalContainer descriptionSection">
+                <h3 style="margin: 0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </h3>
+                <div class="horizontalContainer" style="gap: 8px">
+                  <span class="fa fa-star checked"></span>
+                  4.9
+                  <i class="fa fa-shopping-cart" style="color: #696f79"></i>
+                  300
+                </div>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 264px"
+                >
+                  <div class="horizontalContainer">
+                    <img src="/assets/person2.svg" alt="person2" />
+                    <h5 style="margin: 0">Jane Smith</h5>
+                  </div>
+                  <div
+                    class="horizontalContainer"
+                    style="gap: 0; justify-content: flex-end"
+                  >
+                    <i class="fa fa-tag" style="color: #1dbf73"></i>
+                    $10
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="itemCard verticalContainer" style="gap: 0">
+              <div class="likeButton flexContainer">
+                <i class="fa fa-heart" style="color: red"></i>
+              </div>
+              <img
+                src="/assets/agency2.svg"
+                alt="agency"
+                width="292px"
+                height="254px"
+                style="object-fit: cover"
+              />
+              <div class="card verticalContainer descriptionSection">
+                <h3 style="margin: 0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </h3>
+                <div class="horizontalContainer" style="gap: 8px">
+                  <span class="fa fa-star checked"></span>
+                  4.9
+                  <i class="fa fa-shopping-cart" style="color: #696f79"></i>
+                  300
+                </div>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 264px"
+                >
+                  <div class="horizontalContainer">
+                    <img src="/assets/person2.svg" alt="person2" />
+                    <h5 style="margin: 0">Jane Smith</h5>
+                  </div>
+                  <div
+                    class="horizontalContainer"
+                    style="gap: 0; justify-content: flex-end"
+                  >
+                    <i class="fa fa-tag" style="color: #1dbf73"></i>
+                    $10
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="itemCard hide verticalContainer" style="gap: 0">
+              <div class="likeButton flexContainer">
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <img
+                src="/assets/agency2.svg"
+                alt="agency"
+                width="292px"
+                height="254px"
+                style="object-fit: cover"
+              />
+              <div class="card verticalContainer descriptionSection">
+                <h3 style="margin: 0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </h3>
+                <div class="horizontalContainer" style="gap: 8px">
+                  <span class="fa fa-star checked"></span>
+                  4.9
+                  <i class="fa fa-shopping-cart" style="color: #696f79"></i>
+                  300
+                </div>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 264px"
+                >
+                  <div class="horizontalContainer">
+                    <img src="/assets/person2.svg" alt="person2" />
+                    <h5 style="margin: 0">Jane Smith</h5>
+                  </div>
+                  <div
+                    class="horizontalContainer"
+                    style="gap: 0; justify-content: flex-end"
+                  >
+                    <i class="fa fa-tag" style="color: #1dbf73"></i>
+                    $10
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="itemCard hide verticalContainer" style="gap: 0">
+              <div class="likeButton flexContainer">
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <img
+                src="/assets/agency2.svg"
+                alt="agency"
+                width="292px"
+                height="254px"
+                style="object-fit: cover"
+              />
+              <div class="card verticalContainer descriptionSection">
+                <h3 style="margin: 0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </h3>
+                <div class="horizontalContainer" style="gap: 8px">
+                  <span class="fa fa-star checked"></span>
+                  4.9
+                  <i class="fa fa-shopping-cart" style="color: #696f79"></i>
+                  300
+                </div>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 264px"
+                >
+                  <div class="horizontalContainer">
+                    <img src="/assets/person2.svg" alt="person2" />
+                    <h5 style="margin: 0">Jane Smith</h5>
+                  </div>
+                  <div
+                    class="horizontalContainer"
+                    style="gap: 0; justify-content: flex-end"
+                  >
+                    <i class="fa fa-tag" style="color: #1dbf73"></i>
+                    $10
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="itemCard hide verticalContainer" style="gap: 0">
+              <div class="likeButton flexContainer">
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <img
+                src="/assets/agency2.svg"
+                alt="agency"
+                width="292px"
+                height="254px"
+                style="object-fit: cover"
+              />
+              <div class="card verticalContainer descriptionSection">
+                <h3 style="margin: 0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </h3>
+                <div class="horizontalContainer" style="gap: 8px">
+                  <span class="fa fa-star checked"></span>
+                  4.9
+                  <i class="fa fa-shopping-cart" style="color: #696f79"></i>
+                  300
+                </div>
+                <div
+                  class="horizontalContainer"
+                  style="justify-content: space-between; width: 264px"
+                >
+                  <div class="horizontalContainer">
+                    <img src="/assets/person2.svg" alt="person2" />
+                    <h5 style="margin: 0">Jane Smith</h5>
+                  </div>
+                  <div
+                    class="horizontalContainer"
+                    style="gap: 0; justify-content: flex-end"
+                  >
+                    <i class="fa fa-tag" style="color: #1dbf73"></i>
+                    $10
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleDrawer() {
+        const x = document.getElementById("navResponsive");
+        if (x.className.indexOf("showMenu") == -1) {
+          x.className += " showMenu";
+        } else {
+          x.className = x.className.replace(" showMenu", "");
+        }
+      }
+
+      // Used for the slideshow
+
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slideContainer");
+        let dots = document.getElementsByClassName("dot");
+        let prev = document.getElementsByClassName("prev")[0];
+        let next = document.getElementsByClassName("next")[0];
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+
+        if (slideIndex === 1) {
+          prev.className = `${prev.className} finishedButton`;
+        } else {
+          prev.className = prev.className.replace(" finishedButton", "");
+        }
+
+        if (slideIndex === slides.length) {
+          next.className = `${next.className} finishedButton`;
+        } else {
+          next.className = next.className.replace(" finishedButton", "");
+        }
+      }
+
+      // Used for the counter
+
+      let counter = 0;
+
+      const counterValue = document.getElementById("counter-value");
+      const incrementBtn = document.getElementById("increment-btn");
+      const decrementBtn = document.getElementById("decrement-btn");
+      const totalValue = document.querySelector("#totalValue");
+
+      // To increment the value of counter
+      incrementBtn.addEventListener("click", () => {
+        counter++;
+        counterValue.innerHTML = counter;
+        totalValue.innerHTML = `$${counter * 100}`;
+      });
+
+      // To decrement the value of counter
+      decrementBtn.addEventListener("click", () => {
+        counter--;
+        counterValue.innerHTML = counter;
+        totalValue.innerHTML = `$${counter * 100}`;
+      });
+
+      // Used to remove the hide class
+
+      function showSmallCards() {
+        let childrenComponents =
+          document.getElementsByClassName("recommendedSection")?.[0]?.children;
+        for (i = 0; i < childrenComponents.length; i++) {
+          if (childrenComponents[i].className === "horizontalContainer hide")
+            childrenComponents[i].className = childrenComponents[
+              i
+            ].className.replace(" hide", "");
+        }
+      }
+
+      // Used to remove the hide class
+
+      function showBigCards() {
+        let itemCards = document.getElementsByClassName("itemCard");
+        for (i = 0; i < itemCards.length; i++) {
+          if (itemCards[i].className.includes("hide"))
+            itemCards[i].className = itemCards[i].className.replace(
+              " hide",
+              ""
+            );
+        }
+      }
+
+      // Used to select all checkboxes
+
+      function selectAll() {
+        const checkboxes = document.getElementsByClassName("fa-circle-thin");
+        checkboxes[0].className = "fa fa-check-circle activeChecked";
+        checkboxes[0].className = "fa fa-check-circle activeChecked";
+      }
+    </script>
+  </body>
+</html>
